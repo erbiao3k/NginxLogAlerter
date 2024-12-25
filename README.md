@@ -4,8 +4,6 @@
 ## 运行条件
 - Go 语言环境
 - Kafka 集群
-- Kubernetes 集群
-- Docker 环境
 
 ## 代码逻辑
 1. 初始化内存缓存。
