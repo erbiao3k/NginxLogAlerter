@@ -126,7 +126,7 @@ func handleMessage(message *sarama.ConsumerMessage, cache *bigcache.BigCache) er
 		requestTime, requestStatusCode, requestDuration, requestUpstreamNode, requestClientIP, requestUrl)
 
 	key := requestClientIP + "-" + requestUrl
-	cacheKey := public.GeneratorMd5(key) // 确保 public 包中有 GeneratorMd5 函数
+	cacheKey := public.GeneratorMd5(key)
 
 	if _, err := cache.Get(cacheKey); err == nil {
 		log.Println("缓存已存在，不告警：", key)
